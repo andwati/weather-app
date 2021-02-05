@@ -2,7 +2,10 @@
   <div id="app">
     <main>
       <div class="search-box">
-        <input type="text" name="" class="search-bar" placeholder="Search.....">
+        <input 
+        type="text"  
+        class="search-bar" 
+        placeholder="Search.....">
       </div>
       <div class="weather-wrap">
         <div class="location-box">
@@ -10,8 +13,8 @@
           <div class="date">Monday 8 January 2021</div>
         </div>
         <div class="weather-box">
-          <div class="temp">19°C</div>
-          <div class="weather1">Rain</div>
+          <div class="temp">10°C</div>
+          <div class="weather">Rain</div>
         </div>
       </div>
     </main>
@@ -26,7 +29,10 @@ export default {
   name: 'App',
   data(){
     return{
-      api_key:'1daa066a49777344fecba1fa8101f41f'
+      api_key:'1daa066a49777344fecba1fa8101f41f',
+      url_base: 'https://api.openweathermap.org/data/2.5',
+      query: '',
+      weather:{}
     }
   }
 }
@@ -114,6 +120,21 @@ main{
   font-size: 102px;
   font-weight: 900;
   text-shadow: 3px 6px rgba(0,0,0,0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  margin: 30px 0px;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 
 }
+
+.weather-box .weather{
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+
 </style>
