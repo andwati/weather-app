@@ -1,6 +1,9 @@
 # weather-app
 
 ## Project setup
+
+Get an API key from  
+[OpenWeatherMap](https://home.openweathermap.org/)
 ```
 yarn install
 ```
@@ -20,5 +23,4 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+

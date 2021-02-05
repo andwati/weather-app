@@ -21,8 +21,9 @@
           <div class="weather">{{ weather.weather[0].main }}</div>
         </div>
       </div>
+      
     </main>
-    
+
   </div>
 </template>
 
@@ -33,7 +34,7 @@ export default {
   name: 'App',
   data(){
     return{
-      api_key:'1daa066a49777344fecba1fa8101f41f',
+      api_key:'',
       url_base: 'https://api.openweathermap.org/data/2.5/',
       query: '',
       weather:{}
