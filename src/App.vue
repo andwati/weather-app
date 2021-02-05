@@ -1,28 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <main>
+      <div class="search-box">
+        <input type="text" name="" class="search-bar" placeholder="Search.....">
+      </div>
+    </main>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      api_key:'1daa066a49777344fecba1fa8101f41f'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body{
+  font-family: 'montserrat',sans-serif;
+}
+
+#app{
+  background-image: url('./assets/cold-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s;
+}
+
+
+main{
+  min-height: 100vh;
+  padding: 25px;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.25),rgba);
+  
+}
+
 </style>
