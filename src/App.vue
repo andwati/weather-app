@@ -5,7 +5,11 @@
         <input 
         type="text"  
         class="search-bar" 
-        placeholder="Search.....">
+        placeholder="Search....."
+        v-model="query"
+        @keypress="fetchWeather"
+        />
+        
       </div>
       <div class="weather-wrap">
         <div class="location-box">
@@ -34,7 +38,22 @@ export default {
       query: '',
       weather:{}
     }
+  },
+  methods:{
+    fetchWeather (e){
+      if(e.key == "Enter"){
+        fetch(`${this.api_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
+        .then(res => {
+           return res.json();
+        }).then(this.setResults);
+      }
+    },
+    setResults(results){
+      this.weather = results;
+    }
+
   }
+  
 }
 </script>
 
