@@ -15,9 +15,10 @@
       </div>
 
       <!-- Proof that that api key is here 🌚 -->
-      <p style="margin: 1rem auto; padding: 1rem .5rem; background: white;">
+     <!-- <p style="margin: 1rem auto; padding: 1rem .5rem; background: white;">
         {{ api_key }}
       </p>
+      -->
 
       <div class="weather-wrap" v-if="weather.main != undefined">
         <div class="location-box">
